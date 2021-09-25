@@ -1,10 +1,11 @@
 import React from "react";
 import axios from "axios";
 import { Image, ImageBackground, StyleSheet, View, Text } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 export class WelcomeScreen extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       data: [],
     };
@@ -37,23 +38,26 @@ export class WelcomeScreen extends React.Component {
             Recovered: {this.state.data.recovered}
           </Text>
         </View>
-        <View style={styles.map}>
+        <TouchableOpacity style={styles.map}>
           <Text style={styles.mapStyle}>Map</Text>
-        </View>
-        <View style={styles.progressInMedicine}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.progressInMedicine}
+          onPress={() => this.props.navigation.navigate("Medicine")}
+        >
           <Text style={styles.progressInMedicineStyle}>
             Progress In Medicine
           </Text>
-        </View>
-        <View style={styles.economicalEffect}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.economicalEffect}>
           <Text style={styles.economicalEffectStyle}>Economical Effect</Text>
-        </View>
-        <View style={styles.policy}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.policy}>
           <Text style={styles.policyStyle}>Policy</Text>
-        </View>
-        <View style={styles.about}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.about}>
           <Text style={styles.aboutStyle}>About</Text>
-        </View>
+        </TouchableOpacity>
       </ImageBackground>
     );
   }
@@ -99,7 +103,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 40,
     marginBottom: 10,
-    backgroundColor: "#96ceb4",
+    backgroundColor: "#ffcc5c",
   },
   economicalEffectStyle: {
     textAlign: "center",
@@ -109,7 +113,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 40,
     marginBottom: 10,
-    backgroundColor: "#ffcc5c",
+    backgroundColor: "#96ceb4",
   },
   policyStyle: {
     textAlign: "center",
@@ -128,8 +132,3 @@ const styles = StyleSheet.create({
 });
 
 export default WelcomeScreen;
-
-// export default createStackNavigator({
-//   home: WelcomeScreen,
-//   medicine: ProgressInMedicine,
-// });
