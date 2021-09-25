@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
 import { Image, ImageBackground, StyleSheet, View, Text } from "react-native";
 
-class WelcomeScreen extends React.Component {
+export class WelcomeScreen extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -128,3 +128,8 @@ const styles = StyleSheet.create({
 });
 
 export default WelcomeScreen;
+
+// export default createStackNavigator({
+//   home: WelcomeScreen,
+//   medicine: ProgressInMedicine,
+// });
