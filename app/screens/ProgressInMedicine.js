@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { Picker, View, Text, StyleSheet, ImageBackground } from "react-native";
+import {
+  Picker,
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  ScrollView,
+} from "react-native";
 
 export default class ProgressInMedicine extends Component {
   state = {
@@ -73,86 +80,92 @@ export default class ProgressInMedicine extends Component {
           </View>
           <View style={styles.ttstyle}>
             {this.state.selectedcat == "Pfizer" ? (
-              <View>
-                <Text style={{ fontWeight: "bold", fontSize: 20 }}>PFIZER</Text>
-                <Text>
-                  The Pfizer–BioNTech COVID-19 vaccine, also known as Comirnaty,
-                  is an mRNA vaccine produced by the German company BioNTech and
-                  the American company Pfizer. In Hong Kong, Macau, and Taiwan,
-                  Comirnaty is distributed by Fosun Pharma.
-                </Text>
-                <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
-                  "Who Should Get Vaccinated?
-                </Text>
-                <Text>Recommended for people 12 years and older.</Text>
-                <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
-                  Who Should NOT Get Vaccinated?
-                </Text>
-                <Text>
-                  If you have had a severe allergic reaction (anaphylaxis) or an
-                  immediate allergic reaction, even if it was not severe, to any
-                  ingredient in the Pfizer-BioNTech COVID-19 vaccine (such as
-                  polyethylene glycol), you should not get this vaccine. If you
-                  had a severe or immediate allergic reaction after getting the
-                  first dose of a Pfizer-BioNTech COVID-19 vaccine, you should
-                  not get a second dose of either of this vaccine. A severe
-                  allergic reaction is one that needs to be treated with
-                  epinephrine or EpiPen or with medical care. An immediate
-                  allergic reaction means a reaction within 4 hours of exposure,
-                  including symptoms such as hives, swelling, or wheezing
-                  (respiratory distress). If you aren’t able to get this
-                  vaccine, you may still be able to get a different type of
-                  COVID-19 vaccine.{" "}
-                </Text>
-                <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
-                  Possible Side Effects:
-                </Text>
-                <Text>
-                  Pain, Redness ,Swelling, Tiredness, Headache, Muscle pain,
-                  Chills, Fever, Nausea.
-                </Text>
-              </View>
+              <ScrollView>
+                <View>
+                  <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+                    PFIZER
+                  </Text>
+                  <Text>
+                    The Pfizer–BioNTech COVID-19 vaccine, also known as
+                    Comirnaty, is an mRNA vaccine produced by the German company
+                    BioNTech and the American company Pfizer. In Hong Kong,
+                    Macau, and Taiwan, Comirnaty is distributed by Fosun Pharma.
+                  </Text>
+                  <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
+                    "Who Should Get Vaccinated?
+                  </Text>
+                  <Text>Recommended for people 12 years and older.</Text>
+                  <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
+                    Who Should NOT Get Vaccinated?
+                  </Text>
+                  <Text>
+                    If you have had a severe allergic reaction (anaphylaxis) or
+                    an immediate allergic reaction, even if it was not severe,
+                    to any ingredient in the Pfizer-BioNTech COVID-19 vaccine
+                    (such as polyethylene glycol), you should not get this
+                    vaccine. If you had a severe or immediate allergic reaction
+                    after getting the first dose of a Pfizer-BioNTech COVID-19
+                    vaccine, you should not get a second dose of either of this
+                    vaccine. A severe allergic reaction is one that needs to be
+                    treated with epinephrine or EpiPen or with medical care. An
+                    immediate allergic reaction means a reaction within 4 hours
+                    of exposure, including symptoms such as hives, swelling, or
+                    wheezing (respiratory distress). If you aren’t able to get
+                    this vaccine, you may still be able to get a different type
+                    of COVID-19 vaccine.{" "}
+                  </Text>
+                  <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
+                    Possible Side Effects:
+                  </Text>
+                  <Text>
+                    Pain, Redness ,Swelling, Tiredness, Headache, Muscle pain,
+                    Chills, Fever, Nausea.
+                  </Text>
+                </View>
+              </ScrollView>
             ) : null}
             {this.state.selectedcat == "Moderna" ? (
-              <View>
-                <Text style={{ fontWeight: "bold", fontSize: 20 }}>
-                  Moderna
-                </Text>
-                <Text>
-                  The Moderna COVID-19 vaccine, also known as Spikevax, is an
-                  mRNA vaccine produced by the American company Moderna, the
-                  U.S. National Institute of Allergy and Infectious Diseases,
-                  the U.S. Biomedical Advanced Research and Development
-                  Authority, and the Coalition for Epidemic Preparedness
-                  Innovations.
-                </Text>
-                <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
-                  Who Should Get Vaccinated?
-                </Text>
-                <Text>Recommended for people aged 18 years and older.</Text>
-                <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
-                  Who Should NOT Get Vaccinated?
-                </Text>
-                <Text>
-                  If you have had a severe allergic reaction (anaphylaxis) or an
-                  immediate allergic reaction, even if it was not severe, to any
-                  ingredient in an mRNA COVID-19 vaccine (such as polyethylene
-                  glycol), you should not get an mRNA COVID-19 vaccine. If you
-                  had a severe or immediate allergic reaction after getting the
-                  first dose of an mRNA COVID-19 vaccine, you should not get a
-                  second dose of either of the mRNA COVID-19 vaccines (Moderna
-                  or Pfizer-BioNTech). A severe allergic reaction is one that
-                  needs to be treated with epinephrine or EpiPen or with medical
-                  care.
-                </Text>
-                <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
-                  Possible Side Effects:
-                </Text>
-                <Text>
-                  Pain, Redness ,Swelling, Tiredness, Headache, Muscle pain,
-                  Chills, Fever, Nausea.
-                </Text>
-              </View>
+              <ScrollView>
+                <View>
+                  <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+                    Moderna
+                  </Text>
+                  <Text>
+                    The Moderna COVID-19 vaccine, also known as Spikevax, is an
+                    mRNA vaccine produced by the American company Moderna, the
+                    U.S. National Institute of Allergy and Infectious Diseases,
+                    the U.S. Biomedical Advanced Research and Development
+                    Authority, and the Coalition for Epidemic Preparedness
+                    Innovations.
+                  </Text>
+                  <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
+                    Who Should Get Vaccinated?
+                  </Text>
+                  <Text>Recommended for people aged 18 years and older.</Text>
+                  <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
+                    Who Should NOT Get Vaccinated?
+                  </Text>
+                  <Text>
+                    If you have had a severe allergic reaction (anaphylaxis) or
+                    an immediate allergic reaction, even if it was not severe,
+                    to any ingredient in an mRNA COVID-19 vaccine (such as
+                    polyethylene glycol), you should not get an mRNA COVID-19
+                    vaccine. If you had a severe or immediate allergic reaction
+                    after getting the first dose of an mRNA COVID-19 vaccine,
+                    you should not get a second dose of either of the mRNA
+                    COVID-19 vaccines (Moderna or Pfizer-BioNTech). A severe
+                    allergic reaction is one that needs to be treated with
+                    epinephrine or EpiPen or with medical care.
+                  </Text>
+                  <Text style={{ fontWeight: "bold", fontStyle: "italic" }}>
+                    Possible Side Effects:
+                  </Text>
+                  <Text>
+                    Pain, Redness ,Swelling, Tiredness, Headache, Muscle pain,
+                    Chills, Fever, Nausea.
+                  </Text>
+                </View>
+              </ScrollView>
             ) : null}
             {this.state.selectedcat == "Janssen" ? (
               <View>
@@ -209,7 +222,7 @@ const styles = StyleSheet.create({
   },
   viewStyle: {
     backgroundColor: "#4ecdc4",
-    flex: 0.25,
+    flex: 1,
     alignSelf: "center",
     top: 70,
     position: "absolute",
