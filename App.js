@@ -1,7 +1,8 @@
 import React from "react";
+
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ProgressInMedicine from "./app/screens/ProgressInMedicine";
-import { headerStyle } from "react-native";
+import splashScreen from "./app/screens/SplashScreen";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -12,6 +13,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="splashScreen"
+          component={splashScreen}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           component={WelcomeScreen}
           name="WelcomeScreen"
