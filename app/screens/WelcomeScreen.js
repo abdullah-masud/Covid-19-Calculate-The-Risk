@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Image, ImageBackground, StyleSheet, View, Text } from "react-native";
+import { Image, StyleSheet, View, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 export class WelcomeScreen extends React.Component {
@@ -22,19 +22,33 @@ export class WelcomeScreen extends React.Component {
 
   render() {
     return (
-      <ImageBackground
+      <View
         style={styles.background}
-        source={require("../assets/Black-Screen-Background.jpg")}
+        // source={require("../assets/Black-Screen-Background.jpg")}
       >
         <Image style={styles.logo} source={require("../assets/logo.png")} />
         <View style={styles.update}>
-          <Text style={{ color: "#ffeead", fontSize: 20, paddingBottom: 5 }}>
+          <Text
+            style={{
+              color: "#57CC99",
+              fontSize: 20,
+              paddingBottom: 5,
+              fontWeight: "bold",
+            }}
+          >
             Cases: {this.state.data.cases}
           </Text>
-          <Text style={{ color: "#ffeead", fontSize: 20, paddingBottom: 5 }}>
+          <Text
+            style={{
+              color: "#FF7878",
+              fontSize: 20,
+              paddingBottom: 5,
+              fontWeight: "bold",
+            }}
+          >
             Deaths: {this.state.data.deaths}
           </Text>
-          <Text style={{ color: "#ffeead", fontSize: 20 }}>
+          <Text style={{ color: "#FFEBA1", fontSize: 20, fontWeight: "bold" }}>
             Recovered: {this.state.data.recovered}
           </Text>
         </View>
@@ -49,8 +63,13 @@ export class WelcomeScreen extends React.Component {
             Progress In Medicine
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.economicalEffect}>
-          <Text style={styles.economicalEffectStyle}>Economical Effect</Text>
+        <TouchableOpacity
+          style={styles.economicalEffect}
+          onPress={() => this.props.navigation.navigate("Content")}
+        >
+          <Text style={styles.economicalEffectStyle}>
+            Climate Change vs Covid-19
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.policy}>
           <Text style={styles.policyStyle}>Policy</Text>
@@ -58,7 +77,7 @@ export class WelcomeScreen extends React.Component {
         <TouchableOpacity style={styles.about}>
           <Text style={styles.aboutStyle}>About</Text>
         </TouchableOpacity>
-      </ImageBackground>
+      </View>
     );
   }
 }
@@ -68,6 +87,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 40,
+    backgroundColor: "#112031",
   },
   logo: {
     width: 390,
@@ -84,50 +104,60 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 200,
     backgroundColor: "#fc5c65",
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
   mapStyle: {
-    textAlign: "center",
-    paddingTop: 10,
+    fontWeight: "bold",
   },
   progressInMedicine: {
     width: "100%",
     height: 40,
     marginBottom: 10,
     backgroundColor: "#4ecdc4",
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
   progressInMedicineStyle: {
-    textAlign: "center",
-    paddingTop: 10,
+    fontWeight: "bold",
   },
   economicalEffect: {
     width: "100%",
     height: 40,
     marginBottom: 10,
     backgroundColor: "#ffcc5c",
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
   economicalEffectStyle: {
-    textAlign: "center",
-    paddingTop: 10,
+    fontWeight: "bold",
   },
   policy: {
     width: "100%",
     height: 40,
     marginBottom: 10,
     backgroundColor: "#96ceb4",
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
   policyStyle: {
-    textAlign: "center",
-    paddingTop: 10,
+    fontWeight: "bold",
   },
   about: {
     width: "100%",
     height: 40,
     marginBottom: 10,
-    backgroundColor: "#ffeead",
+    backgroundColor: "#4ecdc4",
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
   aboutStyle: {
-    textAlign: "center",
-    paddingTop: 10,
+    fontWeight: "bold",
   },
 });
 
