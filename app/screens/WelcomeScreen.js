@@ -23,7 +23,7 @@ export class WelcomeScreen extends React.Component {
   render() {
     return (
       <View
-        style={styles.background}
+        style={styles.container}
         // source={require("../assets/Black-Screen-Background.jpg")}
       >
         <Image style={styles.logo} source={require("../assets/logo.png")} />
@@ -65,11 +65,9 @@ export class WelcomeScreen extends React.Component {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.economicalEffect}
-          onPress={() => this.props.navigation.navigate("Content")}
+          onPress={() => this.props.navigation.navigate("EnvironmentalEffect")}
         >
-          <Text style={styles.economicalEffectStyle}>
-            Climate Change vs Covid-19
-          </Text>
+          <Text style={styles.economicalEffectStyle}>Environmental Effect</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.policy}>
           <Text style={styles.policyStyle}>Policy</Text>
@@ -83,7 +81,7 @@ export class WelcomeScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  background: {
+  container: {
     flex: 1,
     justifyContent: "center",
     padding: 40,

@@ -6,7 +6,8 @@ import splashScreen from "./app/screens/SplashScreen";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Content from "./app/screens/Content";
+
+import EnvironmentalEffect from "./app/screens/EnvironmentalEffect";
 
 const Stack = createNativeStackNavigator();
 
@@ -35,11 +36,12 @@ export default function App() {
               color: "#4ecdc4",
             },
             headerTintColor: "white",
+            headerShown: false,
           }}
         />
         <Stack.Screen
-          component={Content}
-          name="Content"
+          component={EnvironmentalEffect}
+          name="EnvironmentalEffect"
           options={{
             headerStyle: {
               backgroundColor: "#BFD8B8",
@@ -48,6 +50,7 @@ export default function App() {
               color: "black",
             },
             headerTintColor: "black",
+            headerShown: false,
           }}
         />
       </Stack.Navigator>
