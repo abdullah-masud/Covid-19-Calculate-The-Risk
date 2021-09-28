@@ -88,23 +88,26 @@ function EnvironmentalEffect(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#BFD8B8",
-    // backgroundColor: "#112031",
+    // backgroundColor: "#BFD8B8",
+    backgroundColor: "#79B4B7",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 
   header: {
     fontSize: 20,
     fontWeight: "bold",
-    backgroundColor: "#32502E",
-    color: "#F3EFCC",
+    // backgroundColor: "#32502E",
+    backgroundColor: "#F8F0DF",
+    // color: "#F3EFCC",
+    color: "#22577A",
     textAlign: "center",
-    marginHorizontal: 13,
+    marginHorizontal: 20,
     padding: 10,
     margin: 10,
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 15,
+    overflow: "hidden",
   },
 
   description: {
@@ -124,7 +127,8 @@ const styles = StyleSheet.create({
   },
 
   questions: {
-    backgroundColor: "#F3EFCC",
+    // backgroundColor: "#F3EFCC",
+    backgroundColor: "#F8F0DF",
     marginHorizontal: 13,
     margin: 8,
     padding: 10,
@@ -132,6 +136,9 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 15,
+    color: "#22577A",
+    fontWeight: "bold",
+    overflow: "hidden",
   },
 
   answer: {
