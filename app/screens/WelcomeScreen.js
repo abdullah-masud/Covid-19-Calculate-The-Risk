@@ -30,7 +30,8 @@ export class WelcomeScreen extends React.Component {
         <View style={styles.update}>
           <Text
             style={{
-              color: "#57CC99",
+              color: "#FFEBA1",
+              // color: "#406343",
               fontSize: 20,
               paddingBottom: 5,
               fontWeight: "bold",
@@ -48,7 +49,7 @@ export class WelcomeScreen extends React.Component {
           >
             Deaths: {this.state.data.deaths}
           </Text>
-          <Text style={{ color: "#FFEBA1", fontSize: 20, fontWeight: "bold" }}>
+          <Text style={{ color: "#57CC99", fontSize: 20, fontWeight: "bold" }}>
             Recovered: {this.state.data.recovered}
           </Text>
         </View>
@@ -85,7 +86,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 40,
-    backgroundColor: "#112031",
+    // backgroundColor: "#112031",
+    backgroundColor: "#082032",
+    // backgroundColor: "#00A19D",
   },
   logo: {
     width: 390,
@@ -102,6 +105,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 200,
     backgroundColor: "#fc5c65",
+    // backgroundColor: "#F8F0DF",
+
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
@@ -114,6 +119,7 @@ const styles = StyleSheet.create({
     height: 40,
     marginBottom: 10,
     backgroundColor: "#4ecdc4",
+    // backgroundColor: "#F8F0DF",
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
@@ -127,6 +133,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     // backgroundColor: "#ffcc5c",
     backgroundColor: "#FEC260",
+    // backgroundColor: "#F8F0DF",
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
@@ -139,6 +146,7 @@ const styles = StyleSheet.create({
     height: 40,
     marginBottom: 10,
     backgroundColor: "#96ceb4",
+    // backgroundColor: "#F8F0DF",
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
@@ -152,6 +160,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     // backgroundColor: "#4ecdc4",
     backgroundColor: "#FDD2BF",
+    // backgroundColor: "#F8F0DF",
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
