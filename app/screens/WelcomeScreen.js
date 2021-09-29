@@ -76,7 +76,10 @@ export class WelcomeScreen extends React.Component {
         >
           <Text style={styles.policyStyle}>Policy</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.about}>
+        <TouchableOpacity
+          style={styles.about}
+          onPress={() => this.props.navigation.navigate("About")}
+        >
           <Text style={styles.aboutStyle}>About</Text>
         </TouchableOpacity>
       </View>
