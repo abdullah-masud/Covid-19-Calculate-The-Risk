@@ -9,7 +9,10 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import ProgressInMedicineData from "./ProgressInMedicineData";
+
+import PolicySuccessfulCountriesData from "./PolicySuccessfulCountriesData";
+import PolicyCountriesPredictedData from "./PolicyCountriesPredictedData";
+
 import { Transition, Transitioning } from "react-native-reanimated";
 
 const transition = (
@@ -20,8 +23,9 @@ const transition = (
   </Transition.Together>
 );
 
-function ProgressInMedicine(props) {
+function Policy(props) {
   const [currentIndex, setCurrentIndex] = React.useState(null);
+  const [currentIndex1, setCurrentIndex1] = React.useState(null);
   const ref = React.useRef();
 
   return (
@@ -32,20 +36,21 @@ function ProgressInMedicine(props) {
     >
       <SafeAreaView>
         <ScrollView>
-          <Text style={styles.header}>Progress In Medicine</Text>
+          <Text style={styles.header}>Policy</Text>
           <Text style={styles.description}>
-            National regulatory authorities have granted emergency use
-            authorizations for twenty-three COVID-19 vaccines. Six of those have
-            been approved for emergency or full use by at least one
-            WHO-recognized stringent regulatory authority (AstraZeneca, Pfizer,
-            Sinopharm, Moderna and Sinovac).
+            The world has been profoundly affected by the coronavirus pandemic.
+            Countries are taking unprecedented measures to combat the spread of
+            the disease.
           </Text>
 
-          {ProgressInMedicineData.map(({ medicine, details }, index) => {
+          <Text style={styles.heading}>
+            Successful countries in beating Covid-19
+          </Text>
+          {PolicySuccessfulCountriesData.map(({ country, details }, index) => {
             return (
               <TouchableOpacity
-                key={medicine}
-                style={styles.medicineContainer}
+                key={country}
+                style={styles.questionsContainer}
                 onPress={() => {
                   ref.current.animateNextTransition();
                   setCurrentIndex(index === currentIndex ? null : index);
@@ -53,13 +58,43 @@ function ProgressInMedicine(props) {
                 activeOpacity={0.7}
               >
                 <View style={[styles.card]}>
-                  <Text style={[styles.medicines]}>{medicine}</Text>
+                  <Text style={[styles.questions]}>{country}</Text>
 
                   {index === currentIndex && (
                     <View>
                       {details.map((details) => (
-                        <Text key={details} style={[styles.details]}>
+                        <Text key={details} style={[styles.answer]}>
                           {details}
+                        </Text>
+                      ))}
+                    </View>
+                  )}
+                </View>
+              </TouchableOpacity>
+            );
+          })}
+          <Text style={styles.heading}>
+            Countries predicted to be successful
+          </Text>
+          {PolicyCountriesPredictedData.map(({ question, answers }, index) => {
+            return (
+              <TouchableOpacity
+                key={question}
+                style={styles.questionsContainer}
+                onPress={() => {
+                  ref.current.animateNextTransition();
+                  setCurrentIndex1(index === currentIndex1 ? null : index);
+                }}
+                activeOpacity={0.7}
+              >
+                <View style={[styles.card]}>
+                  <Text style={[styles.questions]}>{question}</Text>
+
+                  {index === currentIndex1 && (
+                    <View>
+                      {answers.map((answer) => (
+                        <Text key={answer} style={[styles.answer]}>
+                          {answer}
                         </Text>
                       ))}
                     </View>
@@ -111,14 +146,15 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
 
-  medicineContainer: {
+  questionsContainer: {
     paddingHorizontal: 15,
   },
 
-  medicines: {
+  questions: {
     // backgroundColor: "#F3EFCC",
     backgroundColor: "#F8F0DF",
     marginHorizontal: 13,
+    // marginRight: 50,
     margin: 8,
     padding: 10,
     textAlign: "left",
@@ -130,11 +166,26 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
 
-  details: {
+  answer: {
     marginHorizontal: 25,
     textAlign: "justify",
     margin: 3,
   },
+
+  heading: {
+    fontSize: 15,
+    fontWeight: "bold",
+    backgroundColor: "#22577A",
+    color: "#F8F0DF",
+    textAlign: "center",
+    marginHorizontal: 26,
+    padding: 10,
+    margin: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 15,
+    overflow: "hidden",
+  },
 });
 
-export default ProgressInMedicine;
+export default Policy;

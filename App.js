@@ -8,6 +8,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import EnvironmentalEffect from "./app/screens/EnvironmentalEffect";
+import Policy from "./app/screens/Policy";
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,20 @@ export default function App() {
         <Stack.Screen
           component={EnvironmentalEffect}
           name="EnvironmentalEffect"
+          options={{
+            headerStyle: {
+              backgroundColor: "#BFD8B8",
+            },
+            headerTitleStyle: {
+              color: "black",
+            },
+            headerTintColor: "black",
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          component={Policy}
+          name="Policy"
           options={{
             headerStyle: {
               backgroundColor: "#BFD8B8",

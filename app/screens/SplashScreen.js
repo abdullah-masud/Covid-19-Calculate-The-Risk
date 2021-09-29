@@ -10,7 +10,7 @@ export default function splashScreen({ navigation }) {
     <View
       style={{
         flex: 1,
-        backgroundColor: "#112031",
+        backgroundColor: "#082032",
         justifyContent: "center",
         alignItems: "center",
       }}

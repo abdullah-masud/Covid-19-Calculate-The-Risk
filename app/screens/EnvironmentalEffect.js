@@ -36,8 +36,8 @@ function EnvironmentalEffect(props) {
           <Text style={styles.description}>
             COVID-19 is a widespread pandemic of our time. The pandemic
             (COVID-19) has also indicated the importance of focusing on another
-            global crisis, i.e., climate change. The abrupt attack by COVID-19
-            is related to a more serious global climate crisis. Researchers are
+            global crisis, i.e. climate change. The abrupt attack by COVID-19 is
+            related to a more serious global climate crisis. Researchers are
             trying to explore the relationship between COVID-19 and climate
             change.
           </Text>
@@ -91,9 +91,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     // backgroundColor: "#32502E",
-    backgroundColor: "#F8F0DF",
+    backgroundColor: "#22577A",
+    color: "#F8F0DF",
     // color: "#F3EFCC",
-    color: "#22577A",
     textAlign: "center",
     marginHorizontal: 20,
     padding: 10,
