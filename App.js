@@ -32,12 +32,12 @@ export default function App() {
           name="Map"
           options={{
             headerStyle: {
-              backgroundColor: "#f7f7f7",
+              backgroundColor: "#22577A",
             },
             headerTitleStyle: {
-              color: "black",
+              color: "#F8F0DF",
             },
-            headerTintColor: "black",
+            headerTintColor: "#F8F0DF",
             // headerShown: false,
           }}
         />
