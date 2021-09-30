@@ -2,7 +2,7 @@
 To use the app locally using Android Studio.
 
 1) Install Expo
--> npm install -g expo-cli
+# npm install -g expo-cli
 
 2) Reanimated - https://docs.expo.dev/versions/latest/sdk/reanimated/?fbclid=IwAR2Ndv06rWXQTMRHk6h71kIP84dZ-pkq3yBqhmq85yHsAqMcGntyo5mw8U4
 -> expo install react-native-reanimated
