@@ -37,8 +37,8 @@ function ProgressInMedicine(props) {
             National regulatory authorities have granted emergency use
             authorizations for twenty-three COVID-19 vaccines. Six of those have
             been approved for emergency or full use by at least one
-            WHO-recognized stringent regulatory authority (AstraZeneca, Pfizer,
-            Sinopharm, Moderna and Sinovac).
+            WHO-recognized stringent regulatory authority (Sinopharm, Sinovac,
+            AstraZeneca, PFIZER and Moderna).
           </Text>
 
           {ProgressInMedicineData.map(({ medicine, details }, index) => {

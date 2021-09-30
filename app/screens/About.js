@@ -18,7 +18,7 @@ function About() {
           <Text style={styles.description}>
             We are team CodeX and we are taking part in the Nasa Space App
             Challenge. We made an app based on Covid-19: Calculate the risk
-            category. With Covid -19 quickly engulfing the world, it's getting
+            category. With Covid-19 quickly engulfing the world, it's getting
             tough to keep up with the updates, such as which area has Covid
             spread the most and what is the percentage risk. To check on the go,
             we are bringing you a one-stop solution with all information you

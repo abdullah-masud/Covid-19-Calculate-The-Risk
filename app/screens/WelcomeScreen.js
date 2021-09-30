@@ -53,7 +53,10 @@ export class WelcomeScreen extends React.Component {
             Recovered: {this.state.data.recovered}
           </Text>
         </View>
-        <TouchableOpacity style={styles.map}>
+        <TouchableOpacity
+          style={styles.map}
+          onPress={() => this.props.navigation.navigate("Map")}
+        >
           <Text style={styles.mapStyle}>Map</Text>
         </TouchableOpacity>
         <TouchableOpacity
